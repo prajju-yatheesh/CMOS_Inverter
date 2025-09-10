@@ -1,13 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>CMOS Inverter - Magic VLSI & NgSpice</title>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; max-width: 800px; }
-    h1 { color: #2c3e50; }
-    pre { background: #f4f4f4; padding: 10px; border-radius: 6px; }
-  </style>
+
 </head>
 <body>
   <h1>CMOS Inverter using Magic VLSI & NgSpice</h1>
