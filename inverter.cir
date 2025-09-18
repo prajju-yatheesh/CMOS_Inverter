@@ -1,0 +1,65 @@
+* CMOS Inverter Simulation - NGSpice 3
+* Realistic transient, measurements, and power waveform
+
+***************
+* Voltage Sources
+***************
+VDD vdd_node 0 DC 1.8
+* Input pulse: rise/fall 5ns, width 20ns, period 50ns
+Vin in 0 PULSE(0 1.8 0 5n 5n 20n 50n)
+
+***************
+* Transistors
+***************
+* PMOS (connected to VDD)
+M1 out in vdd_node vdd_node pmos W=10u L=0.18u
+
+* NMOS (connected to GND)
+M2 out in 0 0 nmos W=5u L=0.18u
+
+***************
+* MOSFET Models
+***************
+.model nmos NMOS (LEVEL=1 VTO=0.7 KP=120u LAMBDA=0.01)
+.model pmos PMOS (LEVEL=1 VTO=-0.7 KP=60u LAMBDA=0.01)
+
+***************
+* Load
+***************
+Cload out 0 50f          ; realistic capacitive load
+
+***************
+* Simulation Commands
+***************
+.tran 0.1n 100n          ; step 0.1ns, stop 100ns
+
+***************
+* Measurements
+***************
+* Rise/Fall times (10% - 90%)
+.meas tran trise TRIG V(out) VAL=0.18 RISE=1 TARG V(out) VAL=1.62 RISE=1
+.meas tran tfall TRIG V(out) VAL=1.62 FALL=1 TARG V(out) VAL=0.18 FALL=1
+
+* Propagation delays at 50% logic level
+.meas tran tpd_rise TRIG V(in) VAL=0.9 RISE=1 TARG V(out) VAL=0.9 RISE=1
+.meas tran tpd_fall TRIG V(in) VAL=0.45 FALL=1 TARG V(out) VAL=0.45 FALL=1
+
+* Average current through VDD
+.meas tran I_VDD AVG I(VDD)
+
+***************
+* Control Section
+***************
+.control
+run
+echo "Rise Time, Fall Time, Propagation Delays, and Average Power:"
+print trise tfall tpd_rise tpd_fall I_VDD
+echo "Average Power (Watts) = " 1.8 * I_VDD
+
+* Instantaneous power waveform
+* P(t) = VDD * I(VDD)
+print V(vdd_node) I(VDD)
+plot V(out) V(in) V(vdd_node)*I(VDD)
+.endc
+
+.end
