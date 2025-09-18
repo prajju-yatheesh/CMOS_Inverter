@@ -63,7 +63,7 @@
     <h2>📊 Simulation Results</h2>
     <h3>1. Waveforms</h3>
     <p>Input: Square pulse (0–1.8 V).<br>Output: Inverted pulse.</p>
-    <img src="waveform.png" alt="Inverter Waveform (replace with your image)">
+   
     
     <h3>2. Key Measurements</h3>
     <ul>
@@ -83,14 +83,7 @@
     </ul>
   </div>
 
-  <div class="section">
-    <h2>🎯 Takeaway for Interview</h2>
-    <ul>
-      <li>You understand the <b>end-to-end flow</b>: schematic → layout → netlist → simulation.</li>
-      <li>You can <b>explain waveforms</b> and metrics clearly.</li>
-      <li>You know <b>why CMOS is preferred</b>: low static power, high noise margins, scalability.</li>
-    </ul>
-  </div>
+  
 
 </body>
 </html>
