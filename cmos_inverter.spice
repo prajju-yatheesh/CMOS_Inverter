@@ -1,5 +1,0 @@
-* CMOS Inverter Netlist
-.subckt cmos_inv in out vdd gnd
-Mp out in vdd vdd PMOS W=1u L=0.1u
-Mn out in gnd gnd NMOS W=0.5u L=0.1u
-.ends cmos_inv
