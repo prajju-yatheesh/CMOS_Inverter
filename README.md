@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  
+ 
 </head>
 <body>
 
@@ -68,4 +68,29 @@
     <h3>2. Key Measurements</h3>
     <ul>
       <li><b>Propagation Delay (tpHL):</b> ~51 ps</li>
-      <li><b>Propagation Delay (
+      <li><b>Propagation Delay (tpLH):</b> ~55 ps</li>
+      <li><b>Average Power Consumption:</b> ~1.8 µW</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📖 Analysis</h2>
+    <ul>
+      <li>CMOS inverter <b>inverts the input logic level</b>.</li>
+      <li>Low static power → Power only consumed during switching.</li>
+      <li>Symmetric tpHL & tpLH → Indicates <b>balanced transistor sizing</b>.</li>
+      <li>Clean switching transition → High noise margins and reliable operation.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🎯 Takeaway for Interview</h2>
+    <ul>
+      <li>You understand the <b>end-to-end flow</b>: schematic → layout → netlist → simulation.</li>
+      <li>You can <b>explain waveforms</b> and metrics clearly.</li>
+      <li>You know <b>why CMOS is preferred</b>: low static power, high noise margins, scalability.</li>
+    </ul>
+  </div>
+
+</body>
+</html>
