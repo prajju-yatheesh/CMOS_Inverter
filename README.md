@@ -2,37 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CMOS Inverter – Layout, Simulation & Results</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-      background: #f8f9fa;
-      color: #212529;
-    }
-    h1, h2, h3 {
-      color: #0d6efd;
-    }
-    code {
-      background: #e9ecef;
-      padding: 2px 4px;
-      border-radius: 4px;
-    }
-    .section {
-      margin-bottom: 25px;
-      padding: 15px;
-      background: #ffffff;
-      border: 1px solid #dee2e6;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    img {
-      max-width: 600px;
-      display: block;
-      margin: 10px auto;
-    }
-  </style>
+  
 </head>
 <body>
 
